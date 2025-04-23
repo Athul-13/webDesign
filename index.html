@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Say No to Drugs</title>
+    <link rel="stylesheet" href="indexCss.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+<style>
+    /* Loader container: fills screen */
+    .loader-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      z-index: 9999;
+      overflow: hidden;
+      transition: opacity 1s ease-out, visibility 1s ease-out;
+    }
+  
+    .loader-container.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+  
+    /* Typewriter effect text */
+    .typewriter {
+      position: absolute;
+      z-index: 2;
+      color: #fff;
+      font-family: 'Bungee Tint', cursive;
+      font-size: 3rem;
+      font-weight: bold;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 0.15em solid #fff;
+      letter-spacing: 0.15em;
+      animation:
+        typing 3s steps(30, end),
+        blink-caret 0.75s step-end infinite;
+    }
+  
+    .typewriter.fade-out {
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+    }
+  
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+  
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: #fff }
+    }
+  
+    /* Lottie canvas fills screen */
+    #loader-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      z-index: 1;
+    }
+  
+    /* Hide scroll on load */
+    body.loading {
+      overflow: hidden;
+    }
+  
+    /* Main content initially hidden */
+    .main-content {
+      opacity: 0;
+      transition: opacity 1s ease-in;
+    }
+  
+    .main-content.visible {
+      opacity: 1;
+    }
+  </style>
+  </style>
+</head>
+<body class="loading">
+    <!-- Loader Section -->
+    <div class="loader-container">
+        <div class="typewriter">SAY NO TO DRUGS</div>
+        <canvas id="loader-canvas" width="800" height="800"></canvas>
+    </div>
+    
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#statistics">Statistics</a>
+                <a href="#story">Stories</a>
+                <a href="#support">Support</a>
+            </div>
+            <div class="animation-container">
+                <svg
+                  class="ani-container"
+                  x="0px"
+                  y="0px"
+                  viewBox="0 0 50 31.25"
+                  height="31.25"
+                  width="50"
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  <path 
+                    class="track"
+                    stroke-width="4"
+                    fill="none"
+                    pathlength="100"
+                    d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25"
+                  />
+                  <path 
+                    class="car"
+                    stroke-width="4"
+                    fill="none"
+                    pathlength="100"
+                    d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25"
+                  />
+                </svg>
+            </div>
+        </nav>
+
+        <!-- Emergency Button -->
+        <a href="tel:1-800-662-4357" class="emergency-btn">
+            <i>📞</i> Get Help Now: 1-800-662-HELP
+        </a>
+
+        <!-- Hero Section -->
+        <section id="home">
+            <div class="container hero-content">
+                <h1 class="hero-title">Your Life Is Worth More Than A High</h1>
+                <p class="hero-subtitle">Addiction doesn't discriminate. Get informed, get help, and take control of your future.</p>
+                <a href="#support" class="cta-btn">Find Support</a>
+            </div>
+            <div class="slogan slogan-1">CHOOSE LIFE</div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section id="statistics">
+            <div class="container">
+                <h2 class="section-title">The Hard Truth</h2>
+                <div class="stats-container">
+                    <div class="stat-card" data-aos="flip-right">
+                        <div class="stat-number">107,000+</div>
+                        <div class="stat-title">Drug Overdose Deaths</div>
+                        <p>Drug overdose deaths in the United States reached record levels, taking more lives than car accidents and gun violence combined.</p>
+                    </div>
+                    <div class="stat-card" data-aos="flip-left">
+                        <div class="stat-number">70%</div>
+                        <div class="stat-title">Start Before Age 20</div>
+                        <p>Most people who develop substance use disorders start using before age 20, highlighting the importance of early prevention.</p>
+                    </div>
+                    <div class="stat-card" data-aos="flip-right">
+                        <div class="stat-number">40M+</div>
+                        <div class="stat-title">Americans Affected</div>
+                        <p>Over 40 million Americans ages 12 and older have a substance use disorder, impacting families across the nation.</p>
+                    </div>
+                    <div class="stat-card" data-aos="flip-left">
+                        <div class="stat-number">75%</div>
+                        <div class="stat-title">Recovery Success</div>
+                        <p>With proper support and treatment, recovery is possible. Long-term recovery rates can exceed 75% with appropriate intervention.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slogan slogan-2">NOT WORTH IT</div>
+        </section>
+
+        <!-- Story Section -->
+        <section id="story">
+            <div class="container story-container">
+                <h2 class="section-title">Real Stories, Real People</h2>
+                <div class="story-card" data-aos="fade-up">
+                    <p class="story-quote">"I started using to fit in with the 'cool kids' at school. What began as weekend parties turned into daily use. I lost my scholarship, pushed away my family, and nearly lost my life. Three years sober now, I'm rebuilding everything I lost and helping others find their way out. The high is temporary, but the consequences last a lifetime."</p>
+                    <p class="story-author">- Michael, 26</p>
+                </div>
+                <div class="story-card" data-aos="fade-up">
+                    <p class="story-quote">"As a parent, I missed the signs. My daughter became withdrawn, her grades dropped, and her friends changed. I thought it was just teenage rebellion until I found her unconscious in her room. The rehabilitation journey was long and painful for our entire family, but watching her graduate college last month made every tear worth it. Don't wait until it's too late to have the conversation."</p>
+                    <p class="story-author">- Sarah, 52</p>
+                </div>
+                <div class="story-card" data-aos="fade-up">
+                    <p class="story-quote">"The hardest part about addiction is that you don't realize you're in it until you're drowning. Recovery isn't just about stopping use—it's about rebuilding your identity, finding purpose, and learning to face life's challenges without chemical escape. Every day sober is a victory."</p>
+                    <p class="story-author">- James, 34</p>
+                </div>
+            </div>
+            <div class="slogan slogan-1">RECOVERY IS POSSIBLE</div>
+        </section>
+
+        <!-- Support Section -->
+        <section id="support">
+            <div class="container">
+                <h2 class="section-title">Help Is Available</h2>
+                <div class="support-grid">
+                    <div class="support-card" data-aos="fade-up">
+                        <h3>24/7 Helpline</h3>
+                        <p>Confidential support available anytime, day or night. Trained counselors can provide guidance, information, and referrals to local resources.</p>
+                        <a href="tel:1-800-662-4357" class="support-link">Call 1-800-662-HELP</a>
+                    </div>
+                    <div class="support-card" data-aos="fade-up">
+                        <h3>Find Treatment</h3>
+                        <p>From detox to outpatient programs, find evidence-based treatment options that fit your needs and circumstances.</p>
+                        <a href="#" class="support-link">Treatment Locator</a>
+                    </div>
+                    <div class="support-card" data-aos="fade-up">
+                        <h3>Support Groups</h3>
+                        <p>Connect with others on similar journeys. Peer support can be a powerful tool in maintaining long-term recovery.</p>
+                        <a href="#" class="support-link">Find a Group</a>
+                    </div>
+                    <div class="support-card" data-aos="fade-up">
+                        <h3>Family Resources</h3>
+                        <p>Addiction affects the whole family. Find resources to support your loved one while taking care of your own well-being.</p>
+                        <a href="#" class="support-link">Family Support</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slogan slogan-2">YOU ARE NOT ALONE</div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="logo">Say No To Drugs</div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#statistics">Statistics</a>
+                    <a href="#story">Stories</a>
+                    <a href="#support">Support</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">About Us</a>
+                </div>
+                <p class="copyright">© 2025 Say No To Drugs Campaign. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize the loading sequence
+        document.addEventListener("DOMContentLoaded", function () {
+    const typewriterElement = document.querySelector('.typewriter');
+    const loaderCanvas = document.getElementById("loader-canvas");
+    const loaderContainer = document.querySelector('.loader-container');
+    const mainContent = document.querySelector('.main-content');
+    const body = document.querySelector('body');
+
+    // Step 1: After typewriter finishes
+    setTimeout(() => {
+      typewriterElement.classList.add('fade-out'); // fade out text
+      loaderCanvas.style.display = 'block';        // show animation
+
+      // Step 2: Import and play Lottie animation
+      import("https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-web/+esm")
+        .then(module => {
+          const { DotLottie } = module;
+
+          new DotLottie({
+            autoplay: true,
+            loop: true,
+            canvas: loaderCanvas,
+            src: "./ani/smoke.json", // your animation path
+          });
+
+          // Step 3: Reveal main content after animation plays
+          setTimeout(() => {
+            loaderContainer.classList.add('hidden');
+            mainContent.classList.add('visible');
+            body.classList.remove('loading');
+            AOS.refresh(); // Refresh scroll animations if used
+          }, 3000); // Wait time for animation before showing content
+        })
+        .catch(error => {
+          console.error("Lottie failed:", error);
+          // Fallback
+          loaderContainer.classList.add('hidden');
+          mainContent.classList.add('visible');
+          body.classList.remove('loading');
+        });
+    }, 3500); // Wait for typewriter to finish (3s + 0.5s)
+  });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
