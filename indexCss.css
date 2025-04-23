@@ -3,7 +3,7 @@
     --secondary: #d35400;             /* Orange for some contrast with the red, and still within a warm color palette */
     --dark: #1c1c1c;                  /* Very dark gray background (instead of pure black) */
     --darker: #141414;                /* Slightly darker shade for even more contrast or hover effects */
-    --light: #ecf0f1;                 /* Soft off-white for text and subtle elements */
+    --light: #f8f8f8;                 /* Soft off-white for text and subtle elements */
     --white: #ffffff;                 /* Pure white for major text and accents */
     --emergency: #ff4d4f;            /* Red that pops! */
     --emergency-hover: #d9363e;       /* Darker red on hover for emergency items */
